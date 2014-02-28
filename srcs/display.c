@@ -5,10 +5,11 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:13:06 2014 
-** Last update Fri Feb 28 21:21:56 2014 
+** Last update Fri Feb 28 22:06:53 2014 
 */
 
 #include <stdlib.h>
+#include "my_str.h"
 #include "sudo.h"
 
 static void	display_bar()

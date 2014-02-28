@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:31:12 2014 
-** Last update Fri Feb 28 22:05:19 2014 
+** Last update Fri Feb 28 22:08:41 2014 
 */
 
 #ifndef SUDO_H_
@@ -15,9 +15,9 @@
 # define FAILURE	-1
 # define MORE		11
 
-# define SEPARATOR	" "
-# define SIDE		"|"
-# define TOP		"-"
+# define SEPARATOR	' '
+# define SIDE		'|'
+# define TOP		'-'
 # define LINE_SIZE	20
 # define NB_LINES	11
 

@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Wed Dec 18 12:46:25 2013 broggi_t
-** Last update Fri Feb 28 20:38:08 2014 
+** Last update Fri Feb 28 22:08:59 2014 
 */
 
 #include <unistd.h>
@@ -15,6 +15,16 @@
 int		my_putchar(char c)
 {
   write(1, &c, 1);
+  return (0);
+}
+
+int		my_putnchar(char c, int nb)
+{
+  int		i;
+
+  i = -1;
+  while (++i < nb)
+    my_putchar(c);
   return (0);
 }
 

@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:49:10 2014 
-** Last update Fri Feb 28 22:04:55 2014 
+** Last update Fri Feb 28 22:06:37 2014 
 */
 
 #include "sudo.h"
@@ -56,7 +56,7 @@ int		check_square(int x, int y, int value, char **map)
 
 int		check_all(int x, int y, int value, char **map)
 {
-  if (check_col(x) == 1 && check_line(y) == 1 &&
+  if (check_col(x, value, map) == 1 && check_line(y, value, map) == 1 &&
       check_square(x, y, value, map) == 1)
     return (1);
   return (0);
