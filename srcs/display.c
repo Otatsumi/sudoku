@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:13:06 2014 
-** Last update Sat Mar  1 13:09:08 2014 
+** Last update Sat Mar  1 13:28:47 2014 
 */
 
 #include <stdlib.h>
@@ -34,7 +34,10 @@ int		display(char **map)
       while (++j < 9)
 	{
 	  my_putchar(SEPARATOR);
-	  my_putchar(map[i][j]);
+	  if (map[i][j] == 0 || map[i][j] == MORE)
+	    my_putchar(' ');
+	  else
+	    my_putchar(map[i][j]);
 	}
       my_putchar(SIDE);
       my_putchar('\n');
