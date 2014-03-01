@@ -5,10 +5,11 @@
 ## Login   <broggi_t@epitech.eu>
 ##
 ## Started on  Fri 28 Feb 15:52:28 2014 broggi_t
-## Last update Fri Feb 28 22:05:37 2014 
+## Last update Sat Mar  1 01:18:29 2014 
 ##
 
-SRCS	= srcs/check.c \
+SRCS	= srcs/algo.c \
+	  srcs/check.c \
 	  srcs/display.c \
 	  srcs/get_next_line.c \
 	  srcs/main.c \

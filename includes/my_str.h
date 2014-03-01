@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Wed Dec 18 12:54:04 2013 broggi_t
-** Last update Fri Feb 28 22:08:20 2014 
+** Last update Fri Feb 28 23:45:23 2014 
 */
 
 #ifndef MY_STR_H_
