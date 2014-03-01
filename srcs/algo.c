@@ -5,10 +5,28 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 00:38:41 2014 
-** Last update Sat Mar  1 01:18:15 2014 
+** Last update Sat Mar  1 02:57:20 2014 
 */
 
 #include "sudo.h"
+
+static int	is_solved(char **map)
+{
+  int		i;
+  int		j;
+
+  i = -1;
+  while (map[++i])
+    {
+      j = -1;
+      while (map[i][++j])
+	{
+	  if (map[i][j] == 0 || map[i][j] == MORE)
+	    return (0);
+	}
+    }
+  return (1);
+}
 
 int		algo(char **map)
 {
@@ -17,7 +35,7 @@ int		algo(char **map)
   int		status;
   int		tmp;
 
-  while (!is_solve(map))
+  while (!is_solved(map))
     {
       status = 0;
       i = -1;
@@ -27,7 +45,7 @@ int		algo(char **map)
 	  while (++j < 9)
 	    if (map[i][j] == 0 || map[i][j] == MORE)
 	      {
-		tmp = get_values(i, j, map);
+		tmp = get_value(i, j, map);
 		if (tmp != map[i][j])
 		  {
 		    ++status;
