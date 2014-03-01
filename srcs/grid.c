@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 03:12:58 2014 
-** Last update Sat Mar  1 13:25:58 2014 
+** Last update Sat Mar  1 13:48:00 2014 
 */
 
 #include <stdlib.h>
@@ -56,9 +56,9 @@ static int	check_std_line(char **grid, int line)
   while (i < LINE_SIZE - 1)
     {
       if (readed[i] >= '1' && readed[i] <= '9')
-	grid[line][i / 2] = readed[i];
+	grid[line][i / 2 - 1] = readed[i];
       else if (readed[i] == ' ')
-	grid[line][i / 2] = 0;
+	grid[line][i / 2 - 1] = 0;
       else
 	{
 	  my_puterr(INVALID_LINE);

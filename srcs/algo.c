@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 00:38:41 2014 
-** Last update Sat Mar  1 13:17:34 2014 
+** Last update Sat Mar  1 13:44:45 2014 
 */
 
 #include "sudo.h"
@@ -16,10 +16,10 @@ static int	is_solved(char **map)
   int		j;
 
   i = -1;
-  while (map[++i])
+  while (++i < 9)
     {
       j = -1;
-      while (map[i][++j])
+      while (++j < 9)
 	{
 	  if (map[i][j] == 0 || map[i][j] == MORE)
 	    return (0);
@@ -37,6 +37,7 @@ int		algo(char **map)
 
   while (!is_solved(map))
     {
+      my_putchar('c');
       status = 0;
       i = -1;
       while (++i < 9)

@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:31:12 2014 
-** Last update Sat Mar  1 03:29:45 2014 
+** Last update Sat Mar  1 13:31:32 2014 
 */
 
 #ifndef SUDO_H_
@@ -42,5 +42,10 @@ int		get_value(int x, int y, char **map);
 ** display.c
 */
 int		display(char **map);
+
+/*
+** grid.c
+*/
+char		**get_grid();
 
 #endif /* !SUDO_H_ */
