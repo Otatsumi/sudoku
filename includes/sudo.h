@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:31:12 2014 
-** Last update Sat Mar  1 02:58:24 2014 
+** Last update Sat Mar  1 03:29:45 2014 
 */
 
 #ifndef SUDO_H_
@@ -20,6 +20,9 @@
 # define TOP		'-'
 # define LINE_SIZE	20
 # define NB_LINES	11
+
+# define INVALID_LINE	"An invalid line has been found\n"
+# define INVALID_GRID	"The grid is invalid\n"
 
 /*
 ** algo.c

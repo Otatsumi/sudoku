@@ -1,6 +1,10 @@
-sudoku
+Sudoki
 ======
 
-broggi_t
+A simple sudoku grid solver
 
+Author
+------
+
+broggi_t
 bauwen_j
