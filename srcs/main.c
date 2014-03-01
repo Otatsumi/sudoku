@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:39:50 2014 
-** Last update Sat Mar  1 04:06:15 2014 
+** Last update Sat Mar  1 13:24:14 2014 
 */
 
 #include <stdlib.h>
@@ -18,8 +18,11 @@ int		main(void)
 
   if ((grid = get_grid()) == NULL)
     return (1);
-  if (algo(grid) == FAILURE)
-    my_puterr(INVALID_GRID);
+  /*  if (algo(grid) == FAILURE)
+    {
+      my_puterr(INVALID_GRID);
+      return (1);
+      }*/
   display(grid);
   return (0);
 }

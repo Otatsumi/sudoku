@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 03:12:58 2014 
-** Last update Sat Mar  1 04:03:04 2014 
+** Last update Sat Mar  1 13:25:58 2014 
 */
 
 #include <stdlib.h>
@@ -80,7 +80,7 @@ char		**get_grid()
     return (NULL);
   grid[9] = NULL;
   i = -1;
-  while (grid[++i])
+  while (++i < 9)
     {
       if ((grid[i] = malloc(10 * sizeof(char))) == NULL)
 	return (NULL);

@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:13:06 2014 
-** Last update Fri Feb 28 22:06:53 2014 
+** Last update Sat Mar  1 13:09:08 2014 
 */
 
 #include <stdlib.h>
@@ -27,11 +27,11 @@ int		display(char **map)
 
   i = -1;
   display_bar();
-  while (map[++i])
+  while (++i < 9)
     {
       my_putchar(SIDE);
       j = -1;
-      while (map[i][++j])
+      while (++j < 9)
 	{
 	  my_putchar(SEPARATOR);
 	  my_putchar(map[i][j]);
