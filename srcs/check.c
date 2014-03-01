@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:49:10 2014 
-** Last update Fri Feb 28 22:06:37 2014 
+** Last update Sat Mar  1 13:39:37 2014 
 */
 
 #include "sudo.h"
@@ -47,7 +47,7 @@ int		check_square(int x, int y, int value, char **map)
       j = -1;
       while (++j < 3)
 	{
-	  if (map[x / 3 + i][y / 3 + j] == value)
+	  if (map[(x / 3) * 3 + i][(y / 3) * 3 + j] == value)
 	    return (0);
 	}
     }
