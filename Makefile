@@ -5,7 +5,7 @@
 ## Login   <broggi_t@epitech.eu>
 ##
 ## Started on  Fri 28 Feb 15:52:28 2014 broggi_t
-## Last update Sat Mar  1 01:18:29 2014 
+## Last update Sat Mar  1 03:01:50 2014 
 ##
 
 SRCS	= srcs/algo.c \
@@ -17,7 +17,7 @@ SRCS	= srcs/algo.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-NAME	= bin/sudoki-bi
+NAME	= sudoki-bi
 
 CC	= cc
 
@@ -26,16 +26,19 @@ CFLAGS	+= -I includes/
 
 RM	= rm -f
 
+CP	= cp -f
+
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
 	$(CC) -o $(NAME) $(OBJS)
+	$(CP) $(NAME) bin/$(NAME)
 
 clean:
 	$(RM) $(OBJS)
 
 fclean:	clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) bin/$(NAME)
 
 re:	fclean all
 
