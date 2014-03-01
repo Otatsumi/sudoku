@@ -5,7 +5,7 @@
 ** Login   <bauwen_j@epitech.net>
 ** 
 ** Started on  Sat Mar  1 16:10:35 2014 bauwens
-** Last update Sat Mar  1 18:39:23 2014 
+** Last update Sat Mar  1 18:44:48 2014 bauwens
 */
 
 #include "sudo.h"
@@ -22,7 +22,7 @@ int	check_in_square(int x, int y, int val, char **map)
   sol = 0;
   while (x < i)
     {
-      y = j - 2;
+      y = j - 4;
       while (++y < j)
 	{
 	  if ((map[x][y] == MORE || map[x][y] == 0) &&
