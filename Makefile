@@ -5,7 +5,7 @@
 ## Login   <broggi_t@epitech.eu>
 ##
 ## Started on  Fri 28 Feb 15:52:28 2014 broggi_t
-## Last update Sat Mar  1 03:26:20 2014 
+## Last update Sat Mar  1 18:17:08 2014 
 ##
 
 SRCS	= srcs/algo.c \
@@ -14,7 +14,8 @@ SRCS	= srcs/algo.c \
 	  srcs/get_next_line.c \
 	  srcs/grid.c \
 	  srcs/main.c \
-	  srcs/my_str.c
+	  srcs/my_str.c \
+	  srcs/sqare_per_sqare.c
 
 OBJS	= $(SRCS:.c=.o)
 

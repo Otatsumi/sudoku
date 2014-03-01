@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 00:38:41 2014 
-** Last update Sat Mar  1 16:11:17 2014 bauwens
+** Last update Sat Mar  1 18:33:05 2014 
 */
 
 #include "sudo.h"
@@ -37,7 +37,6 @@ int		algo(char **map)
 
   while (!is_solved(map))
     {
-      my_putchar('c');
       status = 0;
       i = -1;
       while (++i < 9)
@@ -54,8 +53,11 @@ int		algo(char **map)
 		  }
 	      }
 	}
+      /*      if (status == 0)
+	return (FAILURE);*/
       if (status == 0)
-	return (FAILURE);
+	map = check_per_square(map);
+      display(map);
     }
   return (SUCCESS);
 }
