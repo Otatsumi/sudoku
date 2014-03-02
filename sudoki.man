@@ -7,7 +7,7 @@ sudoki-bi \- A simple sudoku grid solver.
 
 .SH SYNOPSIS
 .PP
-\fB./sudoki-bi\fR <[\fPPARAMS\fR]>
+\fB./sudoki-bi\fR [\fPPARAMS\fR]
 .SH DESCRIPTION
 .PP
 This program slove a sudoku's grid. The sudoku's grid is read in standard input.
@@ -16,6 +16,9 @@ This program slove a sudoku's grid. The sudoku's grid is read in standard input.
 .TP
 \fB-c\fR, \fB--color\fR
 Display the new numbers in the grid in green.
+.TP
+\fB-h\fR, \fB--help\fR
+Display this help and exit.
 
 .SH EXAMPLES
 .PP
