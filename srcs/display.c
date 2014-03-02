@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:13:06 2014 
-** Last update Sun Mar  2 11:03:21 2014 
+** Last update Sun Mar  2 21:47:00 2014 
 */
 
 #include <stdlib.h>
@@ -20,7 +20,22 @@ static void	display_bar()
   my_putchar('\n');
 }
 
-int		display(char **map)
+static void	display_color(char nb)
+{
+  my_putstr("\033[0;32m");
+  my_putchar(nb + 48);
+  my_putstr("\033[0m");
+}
+
+static void	display_std(char nb)
+{
+  if (nb >= '1' && nb <= '9')
+    my_putchar(nb);
+  else
+    my_putchar(nb + 48);
+}
+
+int		display(char **map, char color)
 {
   int		i;
   int		j;
@@ -36,8 +51,10 @@ int		display(char **map)
 	  my_putchar(SEPARATOR);
 	  if (map[i][j] == 0 || map[i][j] == MORE)
 	    my_putchar(SEPARATOR);
+	  else if (map[i][j] >= 1 && map[i][j] <= 9 && color == 1)
+	    display_color(map[i][j]);
 	  else
-	    my_putchar(map[i][j]);
+	    display_std(map[i][j]);
 	}
       my_putchar(SIDE);
       my_putchar('\n');

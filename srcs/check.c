@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:49:10 2014 
-** Last update Sat Mar  1 13:39:37 2014 
+** Last update Sun Mar  2 21:49:23 2014 
 */
 
 #include "sudo.h"
@@ -17,7 +17,7 @@ int		check_col(int x, int value, char **map)
   i = -1;
   while (++i < 9)
     {
-      if (map[x][i] == value)
+      if (map[x][i] == value || map[x][i] == value - 48)
 	return (0);
     }
   return (1);
@@ -30,7 +30,7 @@ int		check_line(int y, int value, char **map)
   i = -1;
   while (++i < 9)
     {
-      if (map[i][y] == value)
+      if (map[i][y] == value || map[i][y] == value - 48)
 	return (0);
     }
   return (1);
@@ -47,7 +47,8 @@ int		check_square(int x, int y, int value, char **map)
       j = -1;
       while (++j < 3)
 	{
-	  if (map[(x / 3) * 3 + i][(y / 3) * 3 + j] == value)
+	  if (map[(x / 3) * 3 + i][(y / 3) * 3 + j] == value ||
+	      map[(x / 3) * 3 + i][(y / 3) * 3 + j] == value - 48)
 	    return (0);
 	}
     }
@@ -80,5 +81,5 @@ int		get_value(int x, int y, char **map)
 	}
       ++i;
     }
-  return (correct_value);
+  return (correct_value - 48);
 }
