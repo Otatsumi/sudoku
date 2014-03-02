@@ -5,7 +5,7 @@
 ## Login   <broggi_t@epitech.eu>
 ##
 ## Started on  Fri 28 Feb 15:52:28 2014 broggi_t
-## Last update Sat Mar  1 18:17:08 2014 
+## Last update Sun Mar  2 19:26:02 2014 bauwens
 ##
 
 SRCS	= srcs/algo.c \

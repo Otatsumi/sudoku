@@ -1,11 +1,11 @@
 /*
-** main.c for  in /home/broggi_t/projets/rush2/srcs
+** main2.c for  in /home/bauwen_j/test/sudoku
 ** 
-** Made by 
-** Login   <broggi_t@epitech.net>
+** Made by bauwens
+** Login   <bauwen_j@epitech.net>
 ** 
-** Started on  Fri Feb 28 20:39:50 2014 
-** Last update Sun Mar  2 19:08:02 2014 
+** Started on  Sun Mar  2 19:16:39 2014 bauwens
+** Last update Sun Mar  2 19:22:08 2014 bauwens
 */
 
 #include <stdlib.h>
@@ -14,12 +14,12 @@
 
 int		main(void)
 {
-  char		**grid;
-
-  if ((grid = get_grid()) == NULL)
-    return (1);
-  if (algo(grid) == FAILURE)
-    my_puterr(INVALID_GRID);
-  display(grid);
+  char		**grid;;
+  while ((grid = get_grid()) != NULL)
+    {
+      if (algo(grid) == FAILURE)
+	my_puterr(INVALID_GRID);
+      display(grid);
+    }
   return (0);
 }
