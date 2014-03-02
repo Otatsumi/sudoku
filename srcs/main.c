@@ -5,7 +5,7 @@
 ** Login   <bauwen_j@epitech.net>
 ** 
 ** Started on  Sun Mar  2 19:16:39 2014 bauwens
-** Last update Sun Mar  2 21:53:32 2014 
+** Last update Sun Mar  2 22:14:15 2014 
 */
 
 #include <stdlib.h>
@@ -24,9 +24,15 @@ static void	free_grid(char **grid)
 
 static int	check_params(int ac, char **av, char *color)
 {
+  int		i;
+
+  i = 0;
   *color = 0;
-  if (ac > 1 && (my_strcmp(av[1], "-c") || my_strcmp(av[1], "--color")))
-    *color = 1;
+  while (++i < ac)
+    {
+      if ((my_strcmp(av[i], "-c") || my_strcmp(av[i], "--color")))
+	*color = 1;
+    }
   return (SUCCESS);
 }
 
