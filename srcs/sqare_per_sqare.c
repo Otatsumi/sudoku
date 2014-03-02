@@ -5,7 +5,7 @@
 ** Login   <bauwen_j@epitech.net>
 ** 
 ** Started on  Sat Mar  1 16:10:35 2014 bauwens
-** Last update Sat Mar  1 18:44:48 2014 bauwens
+** Last update Sun Mar  2 11:06:08 2014 
 */
 
 #include "sudo.h"
@@ -13,34 +13,24 @@
 int	check_in_square(int x, int y, int val, char **map)
 {
   int	pos;
-  int	sol;
   int	i;
   int	j;
 
   i = x + 3;
   j = y + 3;
-  sol = 0;
+  pos = 0;
   while (x < i)
     {
       y = j - 4;
       while (++y < j)
-	{
-	  if ((map[x][y] == MORE || map[x][y] == 0) &&
-	      (check_all(x, y, val, map) == 1))
-		{
-		  if (sol == 0)
-		    {
-		      pos = x * 10 + y;
-		      ++sol;
-		      my_putchar('b');
-		    }
-		  else
-		    {
-		      my_putchar('c');
-		      return (FAILURE);
-		    }
-		}
-	}
+	if ((map[x][y] == MORE || map[x][y] == 0) &&
+	    (check_all(x, y, val, map) == 1))
+	  {
+	    if (pos == 0)
+	      pos = x * 10 + y;
+	    else
+	      return (FAILURE);
+	  }
       ++x;
     }
   return (pos);
@@ -59,7 +49,7 @@ char	**in_square(char **map, int x, int y)
 	  if ((pos = check_in_square(x, y, val, map)) != FAILURE)
 	    map[pos / 10][pos % 10] = val;
 	}
-      val++;
+      ++val;
     }
   return (map);
 }

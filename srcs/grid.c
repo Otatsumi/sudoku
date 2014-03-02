@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 03:12:58 2014 
-** Last update Sat Mar  1 13:48:00 2014 
+** Last update Sun Mar  2 11:03:37 2014 
 */
 
 #include <stdlib.h>
@@ -87,7 +87,7 @@ char		**get_grid()
       if (check_std_line(grid, i) == FAILURE)
 	return (NULL);
     }
-  /*  if (check_top_line() == FAILURE)
-      return (NULL);*/
+  if (check_top_line() == FAILURE)
+    return (NULL);
   return (grid);
 }

@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 00:38:41 2014 
-** Last update Sat Mar  1 18:33:05 2014 
+** Last update Sun Mar  2 11:02:39 2014 
 */
 
 #include "sudo.h"
@@ -53,11 +53,8 @@ int		algo(char **map)
 		  }
 	      }
 	}
-      /*      if (status == 0)
-	return (FAILURE);*/
-      if (status == 0)
-	map = check_per_square(map);
-      display(map);
+      if (status == 0 && check_per_square(map) == FAILURE)
+	return (FAILURE);
     }
   return (SUCCESS);
 }
