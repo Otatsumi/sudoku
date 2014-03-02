@@ -5,11 +5,7 @@
 ** Login   <bauwen_j@epitech.net>
 ** 
 ** Started on  Sun Mar  2 19:16:39 2014 bauwens
-<<<<<<< HEAD
-** Last update Sun Mar  2 20:12:27 2014 bauwens
-=======
-** Last update Sun Mar  2 20:08:51 2014 
->>>>>>> fe2b18642eb87467ac336f07660423250b9f2e61
+** Last update Sun Mar  2 20:21:07 2014 
 */
 
 #include <stdlib.h>
