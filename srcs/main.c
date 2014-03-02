@@ -5,14 +5,18 @@
 ** Login   <bauwen_j@epitech.net>
 ** 
 ** Started on  Sun Mar  2 19:16:39 2014 bauwens
+<<<<<<< HEAD
 ** Last update Sun Mar  2 20:12:27 2014 bauwens
+=======
+** Last update Sun Mar  2 20:08:51 2014 
+>>>>>>> fe2b18642eb87467ac336f07660423250b9f2e61
 */
 
 #include <stdlib.h>
 #include "my_str.h"
 #include "sudo.h"
 
-void		free_grid(char **grid)
+static void	free_grid(char **grid)
 {
   int		i;
 
