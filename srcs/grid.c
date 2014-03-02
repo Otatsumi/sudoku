@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 03:12:58 2014 
-** Last update Sun Mar  2 11:03:37 2014 
+** Last update Sun Mar  2 19:20:41 2014 
 */
 
 #include <stdlib.h>
@@ -60,10 +60,7 @@ static int	check_std_line(char **grid, int line)
       else if (readed[i] == ' ')
 	grid[line][i / 2 - 1] = 0;
       else
-	{
-	  my_puterr(INVALID_LINE);
-	  return (FAILURE);
-	}
+	return (FAILURE + my_puterr(INVALID_LINE));
       i += 2;
     }
   free(readed);
