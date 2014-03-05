@@ -5,7 +5,7 @@
 ** Login   <broggi_t@epitech.net>
 ** 
 ** Started on  Sat Mar  1 00:38:41 2014 
-** Last update Sun Mar  2 19:31:09 2014 
+** Last update Mon Mar  3 02:48:57 2014 
 */
 
 #include "sudo.h"
@@ -42,14 +42,14 @@ int		algo(char **map)
 	{
 	  j = -1;
 	  while (++j < 9)
-	    if (map[i][j] == 0 || map[i][j] == MORE)
-	      {
-		if (get_value(i, j, map) != map[i][j])
-		  {
-		    ++status;
-		    map[i][j] = get_value(i, j, map);
-		  }
-	      }
+	    {
+	      if ((map[i][j] == 0 || map[i][j] == MORE) &&
+		  get_value(i, j, map) != map[i][j])
+		{
+		  ++status;
+		  map[i][j] = get_value(i, j, map);
+		}
+	    }
 	}
       if (status == 0 && check_per_square(map) == FAILURE)
 	return (FAILURE);
